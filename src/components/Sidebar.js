@@ -1,17 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { sidebarDetails } from '../features/sidebarReducer';
 
 const Sidebar = () => {
+    const dispatch = useDispatch();
 
     const sidebarOpen = useSelector((state) => state.sidebar.value);
 
     console.log(sidebarOpen);
-
+    const sidebarHandler = () => {
+        dispatch(sidebarDetails(!sidebarOpen));
+    }
 
     return (
         <SidebarWrapper isOpen={sidebarOpen}>
-
+            <LinkWrapper>
+                <MenuLink onClick={sidebarHandler} to='/contact'>CONTACT US</MenuLink>
+                <MenuLink onClick={sidebarHandler} to='/services'>SERVICES</MenuLink>
+                <MenuLink onClick={sidebarHandler} to='/new-homes'>NEW HOMES</MenuLink>
+                <MenuLink onClick={sidebarHandler} to='/lettings'>LETTINGS</MenuLink>
+                <MenuLink onClick={sidebarHandler} to='/about'>ABOUT US</MenuLink>
+            </LinkWrapper>
         </SidebarWrapper>
     )
 }
@@ -34,4 +45,26 @@ transition: 0.8s ease-in-out;
     height:95%;
 }
 
+`;
+
+const LinkWrapper = styled.div`
+display: flex ;
+flex-direction: column;
+width:100%;
+height:100%;
+padding:20px 0;
+
+
+`;
+const MenuLink = styled(Link)`
+color:#fff;
+cursor:pointer;
+/* margin:15px 15px; */
+padding:10px 15px ;
+text-decoration:none;
+font-size:18px;
+
+:hover{
+    background-color:#B3B3B3 ;
+}
 `;

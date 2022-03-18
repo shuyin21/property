@@ -6,6 +6,7 @@ import { GiHamburgerMenu as BurgerMenu } from 'react-icons/gi';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import { sidebarDetails } from '../features/sidebarReducer';
 import { useSelector, useDispatch } from 'react-redux';
+import { MdHomeWork } from 'react-icons/md';
 
 
 const Nav = () => {
@@ -20,7 +21,7 @@ const Nav = () => {
     return (
         <NavMain>
             <NavWrapper>
-                <Logo />
+                <Logo><HomeIcon /><h4>S</h4><h3>H</h3><h4>U</h4></Logo>
                 <Menu>
 
                     <MenuItem ><h4>Property Search</h4><SearchIcon /></MenuItem>
@@ -62,7 +63,23 @@ text-align:center;
 const Logo = styled.div`
 width:100px;
 height:80%;
-background-color: red ;
+background-color: #fff ;
+display:flex;
+/* flex-direction:column ; */
+align-items:center;
+justify-content:center;
+h3{
+        
+        color:red;
+    }
+h4{
+   
+    font-size:15px ;
+    margin:0;
+    padding:0;
+    color:#333;
+    
+}
 
 `;
 const Menu = styled.div`
@@ -100,4 +117,12 @@ h4{
 const CloseIcon = styled(RiCloseCircleFill)`
 width:20px;
 height:20px;
+`;
+
+const HomeIcon = styled(MdHomeWork)`
+height:40px;
+width:30px;
+margin:0;
+padding:0; ;
+
 `;
