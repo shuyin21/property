@@ -38,7 +38,7 @@ position:absolute;
 right:0px;
 top: ${({ isOpen }) => (isOpen ? '50px' : '-900px')};
 z-index:-1 ;
-transition: 0.8s ease-in-out;
+transition: 0.5s ease-in-out;
 
 @media screen and (max-width:500px){
     width:100%;

@@ -6,6 +6,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Sidebar from './components/Sidebar';
 import Services from './pages/Services';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route exact path='/' element={<Homepage />} />
 
           <Route path='/services' element={<Services />} />
-          <Route path='/contact' element={<Homepage />} />
+          {/* <Route path='/contact' element={<Homepage />} /> */}
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>
 

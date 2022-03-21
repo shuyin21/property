@@ -7,6 +7,7 @@ import { RiCloseCircleFill } from 'react-icons/ri';
 import { sidebarDetails } from '../features/sidebarReducer';
 import { useSelector, useDispatch } from 'react-redux';
 import { MdHomeWork } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -21,7 +22,7 @@ const Nav = () => {
     return (
         <NavMain>
             <NavWrapper>
-                <Logo><HomeIcon /><h4>S</h4><h3>H</h3><h4>U</h4></Logo>
+                <Logo to='/'><HomeIcon /><h4>S</h4><h3>H</h3><h4>U</h4></Logo>
                 <Menu>
 
                     <MenuItem ><h4>Property Search</h4><SearchIcon /></MenuItem>
@@ -60,7 +61,7 @@ text-align:center;
 
 
 `;
-const Logo = styled.div`
+const Logo = styled(Link)`
 width:100px;
 height:80%;
 background-color: #fff ;
@@ -68,6 +69,7 @@ display:flex;
 /* flex-direction:column ; */
 align-items:center;
 justify-content:center;
+text-decoration:none;
 h3{
         
         color:red;
