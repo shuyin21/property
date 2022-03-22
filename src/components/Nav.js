@@ -19,10 +19,11 @@ const Nav = () => {
         dispatch(sidebarDetails(!sidebarOpen));
     }
 
+
     return (
         <NavMain>
             <NavWrapper>
-                <Logo to='/'><HomeIcon /><h4>S</h4><h3>H</h3><h4>U</h4></Logo>
+                <Logo onClick={() => { dispatch(sidebarDetails(false)) }} to='/'><HomeIcon /><h4>S</h4><h3>H</h3><h4>U</h4></Logo>
                 <Menu>
 
                     <MenuItem ><h4>Property Search</h4><SearchIcon /></MenuItem>
@@ -39,25 +40,29 @@ const Nav = () => {
 export default Nav
 
 
-const NavMain = styled.div`
-width:100vw;
-height:50px;
-background-color:#333;
-
-
-display:flex;
-align-items:center;
-z-index:10;
+const NavMain = styled.nav`
+height:60px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+position: sticky;
+top:0;
+background-color:#333 ;
+z-index: 200;
+overflow: hidden;
+font-family: 'El Messiri', sans-serif;
 
 `;
 const NavWrapper = styled.div`
 width:100% ;
 height:100%;
-padding:5px 10px;
+padding:5px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 text-align:center;
+
 
 
 `;

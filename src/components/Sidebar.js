@@ -37,8 +37,9 @@ background-color:#333 ;
 position:absolute;
 right:0px;
 top: ${({ isOpen }) => (isOpen ? '50px' : '-900px')};
-z-index:-1 ;
+z-index:100 ;
 transition: 0.5s ease-in-out;
+font-family: 'El Messiri', sans-serif;
 
 @media screen and (max-width:500px){
     width:100%;
