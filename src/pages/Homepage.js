@@ -40,7 +40,7 @@ width:100%;
 height:100%;
 display:flex;
 flex-direction:column;
-z-index:-99 ;
+z-index:1 ;
 
 
 `;
@@ -50,7 +50,7 @@ width:100%;
 height:800px;
 
     position: relative;
-    z-index:-99;
+    
    
     :before {
     content:'';
