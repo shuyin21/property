@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BannerImage from '../images/banner.jpg';
 import { useDispatch } from 'react-redux';
 import { sidebarDetails } from '../features/sidebarReducer';
+import Button from '../components/Button';
 
 const Homepage = () => {
 
@@ -19,9 +20,14 @@ const Homepage = () => {
                     <p>When you move with SHU we’re behind you every step of the
                         way, to make your moving journey easier. It’s why we’ve been given a
                         5* rating in more than a thousand Google reviews!</p>
+                    <Button value={'arrange valuation'} />
                 </BannerIntro>
 
+
+
+
             </BannerWrapper>
+
         </HomeWrapper>
     )
 }
@@ -107,3 +113,4 @@ p{
    
 }
 `;
+
