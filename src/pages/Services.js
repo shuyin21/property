@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components'
 
 const Services = () => {
     return (
-        <div>Services</div>
+        <ServicesWrapper>
+
+        </ServicesWrapper>
     )
 }
 
 export default Services
+
+
+const ServicesWrapper = styled.div`
+
+
+`;
