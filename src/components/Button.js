@@ -1,10 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as LinkS } from 'react-scroll';
 
 
 const Button = (props) => {
     return (
-        <Wrapper>
+        <Wrapper
+            to={props.whereTo}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact='true'
+            offset={-80
+            }>
             <h3>{props.value}</h3>
         </Wrapper>
     )
@@ -13,7 +21,7 @@ const Button = (props) => {
 export default Button;
 
 
-const Wrapper = styled.div`
+const Wrapper = styled(LinkS)`
 /* height:30px; */
 min-width:180px;
 color:#fff ;
